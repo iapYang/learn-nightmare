@@ -1,6 +1,8 @@
 const $ = require('jquery');
+const Promise = require('bluebird');
 
 const nightmare = require('nightmare')({
+    Promise,
     openDevTools: {
         mode: 'detach',
     },
@@ -19,38 +21,26 @@ nightmare
     .click('a.sn-login')
     // for login wait qr scan
     .wait(30 * 1000)
-
-    .wait(() => {
-
-    })
-    .exists('.J_LinkBuy')
-    .then(ifExists => {
-        if (ifExists) {
-            console.log('yes');
-        } else {
-            console.log('no');
-        }
-    })
-    .goto('www.baidu.com')
-    .refresh()
     .catch(error => {
         console.error('Search failed:', error);
     });
 
-function checkIfExists() {
+function loop() {
+    let ifLinkBuyExists = false;
     nightmare
         .exists('.J_LinkBuy')
         .then(ifExists => {
-            if (ifExists) {
-                console.log('yeah');
-                
-                return true;
-            }
-            console.log('no');
-                nightmare
-                .refresh()
-                .once('did-finish-load', () => {
-                    checkIfExists();
-                });
+            console.log('in');
+            ifLinkBuyExists = ifExists;
         });
+
+    if (ifLinkBuyExists) {
+        console.log('exists');
+    } else {
+        console.log('not exists');
+        nightmare
+            .refresh()
+            .wait('body');
+        loop();
+    }
 }
