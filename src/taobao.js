@@ -1,9 +1,6 @@
 const Nightmare = require('nightmare');
 const vo = require('vo');
 
-const login = require('./login');
-const refresh = require('./refresh');
-
 const nightmare = new Nightmare({
     openDevTools: {
         mode: 'detach',
