@@ -6,6 +6,7 @@
   "scripts": {
     "example": "node ./src/example.js",
     "tb": "node ./src/taobao",
+    "vo": "node ./src/vo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/iapYang/learn-nightmare#readme",
   "devDependencies": {
     "bluebird": "^3.5.0",
-    "nightmare": "^2.10.0"
+    "nightmare": "^2.10.0",
+    "vo": "^4.0.2"
   }
 }

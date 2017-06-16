@@ -92,7 +92,7 @@
         // 迭代器 & 生成器
         "no-iterator": "error", // 禁止使用Iterator属性
         "no-restricted-syntax": "error", // 使用对应的数组/对象方法去迭代操作成员
-        "generator-star-spacing": "error", // ＊前后不要都有空格
+        "generator-star-spacing": ["error", "after"], // ＊前后不要都有空格
 
 
         // 属性
