@@ -62,7 +62,7 @@
         }], // 统一函数风格为函数表达式或函数声明，并且允许使用箭头函数
         "newline-before-return": "error", // 要求 return 语句之前有一空行
         "wrap-iife": ["error", "outside"], // 立即执行函数外部必须包裹括号
-        "no-loop-func": "error", // 禁止在非function内声明function
+        // "no-loop-func": "error", // 禁止在非function内声明function
         "prefer-rest-params": "error", // 参数使用解构形式
 
         // "space-before-function-paren": "error", // 函数括号前必须要有空格

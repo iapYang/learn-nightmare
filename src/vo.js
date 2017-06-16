@@ -10,7 +10,8 @@ const nightmare = new Nightmare({
     dock: true,
 });
 
-const run = function *() {
+/* eslint func-style: 0 */
+const run = function* () {
     yield nightmare.goto('http://www.sina.com')
         .wait(30 * 1000);
 
