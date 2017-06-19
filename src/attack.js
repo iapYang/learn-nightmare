@@ -22,6 +22,7 @@ const attack = function* () {
         .viewport(1280, 1280);
 
     const condition = true;
+    let times = 0;
     while (condition) {
         yield nightmare
             // .refresh()
@@ -52,6 +53,9 @@ const attack = function* () {
             .insert('#url', chance.url())
             .click('#submit')
             .wait(20 * 1000);
+
+        times += 1;
+        console.log(`attacked ${times}.`);
     }
 
     return '233333';
