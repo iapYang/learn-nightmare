@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/iapYang/learn-nightmare#readme",
   "devDependencies": {
+    "axios": "^0.16.2",
     "bluebird": "^3.5.0",
     "chance": "^1.0.9",
     "nightmare": "^2.10.0",
