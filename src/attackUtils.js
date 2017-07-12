@@ -31,7 +31,6 @@ module.exports = {
                 return true;
             })
             .insert('#url', chance.url())
-            .click('#submit')
-            .wait(20 * 1000);
+            .click('#submit');
     },
 };

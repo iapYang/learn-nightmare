@@ -24,6 +24,7 @@ const attack = function* () {
     let times = 0;
     while (condition) {
         yield attackBlog(nightmare, url);
+        yield nightmare.wait(20 * 1000);
 
         times += 1;
         console.log(`attacked ${times}.`);

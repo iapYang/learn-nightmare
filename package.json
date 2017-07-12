@@ -8,6 +8,7 @@
     "tb": "node ./src/taobao",
     "vo": "node ./src/vo",
     "blog": "node ./src/attackBlog",
+    "proxy": "node ./src/attackProxy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
