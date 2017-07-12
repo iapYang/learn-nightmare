@@ -3,11 +3,8 @@ const Chance = require('chance');
 const chance = new Chance();
 
 module.exports = {
-    attackBlog(nightmare, url) {
+    attackBlog(nightmare) {
         return nightmare
-            // .refresh()
-            .goto(url)
-            .scrollTo('100%', 0)
             .wait('#comment')
             .insert('#comment', chance.paragraph())
             .wait(() => {

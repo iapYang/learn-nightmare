@@ -23,7 +23,10 @@ const attack = function* () {
     const condition = true;
     let times = 0;
     while (condition) {
-        yield attackBlog(nightmare, url);
+        yield nightmare
+            .goto(url)
+            .scrollTo('100%', 0);
+        yield attackBlog(nightmare);
         yield nightmare.wait(20 * 1000);
 
         times += 1;
